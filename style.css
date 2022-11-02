@@ -1,0 +1,129 @@
+
+:root{
+    --primary-color: #dfe6e9;
+    --secondary-color: #fdcb6e;
+    --ternary-color: #4a5ea3;
+    --quaternary-color: #00cec9;
+    --light-color: #fff;
+    --text-color: #2d3436;
+}
+
+*{
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    cursor: default;
+}
+
+body{
+    background-color: var(--primary-color);
+    
+}
+
+#principal{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+#titulo{
+    text-align: center;
+    color: var(--text-color)
+}
+
+#placar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#jogador, #computador{
+    flex-grow:  1;
+    color: var(--light-color);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+#jogador h2, #computador h2{
+    margin: 0;
+    padding: 0;
+}
+
+#jogador-nome, #computador-nome{
+    font-size: 24px;
+}
+
+#jogador-pontos, #computador-pontos{
+    font-size: 52px;
+    position: absolute;
+    top: 8px;
+    right: 20px;
+}
+
+#jogador{
+    background-color: var(--ternary-color);   
+}
+
+#jogador #jogador-escolha, #computador #computador-escolha{
+    list-style: none;
+    text-align: center;
+    margin: 30px 0 0 ;
+    padding: 0;
+}
+
+#jogador #jogador-escolha li, #computador #computador-escolha li{
+    display: inline;
+    padding: 0 15px;
+}
+
+#jogador #jogador-escolha a, #computador #computador-escolha a{
+    opacity: 0.2;
+    
+}
+
+#jogador #jogador-escolha a:hover,
+#jogador #jogador-escolha a.selecionado, #computador #computador-escolha a.selecionado{
+    opacity: 1;
+}
+
+#jogador #jogador-escolha img, #computador #computador-escolha img{
+    max-width: 80px;
+}
+
+#versus{
+    font-size: 80px;
+    padding: 0 40px;
+    color: var(--text-color);
+}
+
+#computador{
+    background-color: var(--secondary-color);
+    
+}
+
+#mensagem{
+    background-color: var(--quaternary-color);
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 20px;
+    font-size: 24px;
+    color: var(--light-color);
+}
+
+@media(max-width: 998px){
+    #placar{
+        flex-direction: column;
+    }
+
+    #versus{
+        padding: 20px 0;
+    }
+
+    #jogador, #computador, #mensagem{
+        width: 90%;
+    }
+
+    #mensagem{
+        margin: 20px auto;
+    }
+}
